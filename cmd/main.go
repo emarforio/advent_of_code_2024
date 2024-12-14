@@ -10,8 +10,8 @@ import (
 )
 
 func main() {
-    task := "1a"
-    result := 0
+	task := "1a"
+	result := 0
 
 	if len(os.Args) > 1 {
 		task = os.Args[1]
@@ -25,7 +25,7 @@ func main() {
 		result = task1.Task1a()
 
 	case "1b":
-        result = task1.Task1b()
+		result = task1.Task1b()
 
 	}
 

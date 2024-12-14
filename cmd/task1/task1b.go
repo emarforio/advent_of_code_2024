@@ -5,21 +5,21 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-    "path/filepath"
-    "runtime"
+	"path/filepath"
+	"runtime"
 	"strconv"
 	"strings"
 )
 
 func Task1b() int {
 	// Load dataset
-    _, filename, _, ok := runtime.Caller(0)
+	_, filename, _, ok := runtime.Caller(0)
 	if !ok {
 		panic("Error: Unable to get file information")
 	}
 
 	dir := filepath.Dir(filename)
-    filepath := filepath.Join(dir, "task1.txt")
+	filepath := filepath.Join(dir, "task1.txt")
 
 	f, err := os.Open(filepath)
 	if err != nil {
@@ -38,7 +38,7 @@ func Task1b() int {
 			fmt.Println(err)
 		}
 
-        numbers := strings.Fields(line)
+		numbers := strings.Fields(line)
 		if len(numbers) < 2 {
 			break
 		}
@@ -48,8 +48,8 @@ func Task1b() int {
 		secondNum, err2 := strconv.Atoi(numbers[1])
 
 		if err1 != nil || err2 != nil {
-            errorMessage := fmt.Sprintf("Could not parse line %s\n", line)
-            panic(errorMessage)
+			errorMessage := fmt.Sprintf("Could not parse line %s\n", line)
+			panic(errorMessage)
 		}
 
 		firstDistanceList[i] = firstNum
@@ -65,4 +65,3 @@ func Task1b() int {
 
 	return totalSum
 }
-

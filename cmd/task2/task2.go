@@ -4,7 +4,6 @@ import (
 	"os"
 	"path/filepath"
 	"runtime"
-	"strings"
 )
 
 func Task2a() int {
@@ -22,15 +21,15 @@ func Task2a() int {
 		panic(err)
 	}
 
-    f.Close()
+	f.Close()
 	safeLevelCount := 0
 	return 0
 }
 
 func processLine(line string) []int {
-    panic("Not implemented")
+	panic("Not implemented")
 }
 
 func checkLevel(level [5]int) {
-    panic("Not implemented")
+	panic("Not implemented")
 }
