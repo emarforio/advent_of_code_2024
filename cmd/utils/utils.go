@@ -1,5 +1,7 @@
 package utils
 
+import "fmt"
+
 func FindMaxima(firstSlice []int, secondSlice []int) (firstMaxVal int, secondMaxVal int, firstIndex int, secondIndex int) {
 
 	firstMaxVal = firstSlice[0]
@@ -41,4 +43,10 @@ func SimilarityScore(toCheck int, slice []int) int {
 	}
 	return toCheck * noOccurrences
 }
-
+func remove(slice []int, index int) []int {
+    if index < 0 || index >= len(slice) {
+        fmt.Println("Index out of bounds")
+        return slice
+    }
+    return append(slice[:index], slice[index+1:]...)
+}

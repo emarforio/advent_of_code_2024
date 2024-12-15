@@ -1,12 +1,10 @@
 package main
 
 import (
+	"adventsofcode/task1"
+	"adventsofcode/task2"
 	"fmt"
 	"os"
-)
-
-import (
-	"adventsofcode/task1"
 )
 
 func main() {
@@ -26,6 +24,9 @@ func main() {
 
 	case "1b":
 		result = task1.Task1b()
+
+  case "2a":
+    result = task2.Task2a()
 
 	}
 
